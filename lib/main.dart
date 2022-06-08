@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //Функция получения списка покемонов
   getPokemons() async {
     //Обращение к API
-    var resp = await http.get(Uri.encodeFull(
+    var resp = await http.get(Uri.parse(
         "https://pokeapi.co/api/v2/pokemon?limit=$numberOfPokemons"));
     //Декодирование из json в List result и получение count числа
     PokemonResponse temporary =
